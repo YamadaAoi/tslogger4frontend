@@ -8,12 +8,29 @@ export class TsLog implements TsLogService {
   maxLen: number; // 日志数量上限
   logName: string; // 日志文件名
   logList: tsLogUtil.LogItem[]; // 日志列表
-  constructor(config: TsLogService) {
-    this.doConsole = config.doConsole || false;
-    this.usetsLog = config.usetsLog || true;
-    this.itemName = config.itemName || "tsLog";
-    this.maxLen = config.maxLen || 500;
-    this.logName = config.logName || "TSLOG";
+  constructor(config?: TsLogService) {
+    this.doConsole = false;
+    this.usetsLog = true;
+    this.itemName = "tsLog";
+    this.maxLen = 500;
+    this.logName = "TSLOG";
+    if (config) {
+      if (undefined !== config.doConsole) {
+        this.doConsole = config.doConsole;
+      }
+      if (undefined !== config.usetsLog) {
+        this.usetsLog = config.usetsLog;
+      }
+      if (undefined !== config.itemName) {
+        this.itemName = config.itemName;
+      }
+      if (undefined !== config.maxLen) {
+        this.maxLen = config.maxLen;
+      }
+      if (undefined !== config.logName) {
+        this.logName = config.logName;
+      }
+    }
     this.logList = [];
     this._initLog();
   }
