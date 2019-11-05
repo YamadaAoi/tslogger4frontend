@@ -1,5 +1,5 @@
 {
-  "name": "tslog",
+  "name": "tslogger",
   "version": "1.0.0",
   "description": "记录前端日志并下载",
   "main": "index.ts",
