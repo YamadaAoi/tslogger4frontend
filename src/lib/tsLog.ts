@@ -1,7 +1,7 @@
 import TsLogService from "./tsLogService";
 import * as tsLogUtil from "./tsLog.util";
 
-export class Tslog implements TsLogService {
+export class TsLog implements TsLogService {
   usetsLog: boolean; // 使用存储及下载日志功能
   doConsole: boolean; // 在控制台打印日志
   itemName: string; // 自定义localStorage存储key值

@@ -1,2 +1,2 @@
-import { Tslog } from "./lib/tsLog";
-export { Tslog };
+import { TsLog } from "./lib/tsLog";
+export default TsLog;
