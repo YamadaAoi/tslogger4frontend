@@ -1,0 +1,17 @@
+{
+  "extends": ["tslint:recommended", "tslint-config-prettier"],
+  "rules": {
+    "ordered-imports": [false],
+    "object-literal-sort-keys": [false],
+    "interface-name": [true, "never-prefix"],
+    "no-console": false,
+    "member-access": [true, "no-public"],
+    "no-debugger": [false],
+    "prefer-const": [false],
+    "jsx-no-lambda": [false],
+    "no-bitwise": false
+  },
+  "linterOptions": {
+    "exclude": ["node_modules/**/*.ts"]
+  }
+}

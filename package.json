@@ -1,0 +1,29 @@
+{
+  "name": "tslog",
+  "version": "1.0.0",
+  "description": "记录前端日志并下载",
+  "main": "index.ts",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack --config build/webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "log",
+    "download"
+  ],
+  "author": "zhouyinkui",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^3.6.4"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.0",
+    "ts-loader": "^6.2.1",
+    "tslint": "^5.7.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-loader": "^3.5.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
