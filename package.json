@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "description": "记录前端日志并下载",
   "main": "index.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YamadaAoi/tsLog.git"
+  },
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --config build/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "ts",
+    "typescript",
+    "storage",
     "log",
     "download"
   ],
