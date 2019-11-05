@@ -28,7 +28,7 @@ export function dateFormat(date: number, fmt: string = "yyyy-MM-dd hh:mm:ss") {
       (formatDate.getFullYear() + "").substr(4 - RegExp.$1.length)
     );
   }
-  let o = {
+  let o: any = {
     "M+": formatDate.getMonth() + 1,
     "d+": formatDate.getDate(),
     "h+": formatDate.getHours(),

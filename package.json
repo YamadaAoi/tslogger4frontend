@@ -2,14 +2,15 @@
   "name": "tslogger4frontend",
   "version": "1.0.1",
   "description": "记录前端日志并下载",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YamadaAoi/tsLog.git"
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && webpack --config build/webpack.config.js",
+    "build": "npm run clean && tsc -p ./tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -26,11 +27,8 @@
   },
   "devDependencies": {
     "rimraf": "^3.0.0",
-    "ts-loader": "^6.2.1",
     "tslint": "^5.7.0",
     "tslint-config-prettier": "^1.18.0",
-    "tslint-loader": "^3.5.4",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "tslint-loader": "^3.5.4"
   }
 }
