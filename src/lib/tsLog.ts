@@ -100,7 +100,7 @@ export class TsLog implements TsLogService {
       this.logList.push({
         log: JSON.stringify(obj),
         date: new Date().getTime(),
-        type
+        type,
       });
     }
     // window.localStorage.removeItem(this.itemName);

@@ -6,6 +6,7 @@
 前端日志使用 console 打印不易保存，项目中如使用 websocket 出现异常无法直接定位问题。
 
 日志保存在 localstorage 中，低版本浏览器不兼容，只做开发调试用。
+localstorage 大小有限（5M 左右），需要合理安排，仅打印关键部分，下载的日志文件推荐使用 notepad++c 查看。
 
 配置介绍：
 1、usetsLog：boolean

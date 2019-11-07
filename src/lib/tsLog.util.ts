@@ -33,7 +33,7 @@ export function dateFormat(date: number, fmt: string = "yyyy-MM-dd hh:mm:ss") {
     "d+": formatDate.getDate(),
     "h+": formatDate.getHours(),
     "m+": formatDate.getMinutes(),
-    "s+": formatDate.getSeconds()
+    "s+": formatDate.getSeconds(),
   };
   for (let k in o) {
     if (new RegExp(`(${k})`).test(fmt)) {
