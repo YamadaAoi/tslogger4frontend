@@ -1,6 +1,6 @@
 {
   "name": "tslogger4frontend",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "记录前端日志并下载",
   "main": "dist/tslog.min.js",
   "types": "dist/index.d.ts",
