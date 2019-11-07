@@ -23,13 +23,13 @@ localstorage 自定义存储 key 值，默认 tsLog。
 日志存储条数上限，默认 500。
 
 5、logName：string
-下载日志文件名，默认 TSLOG，文件名自动添加时间及类型，形如 TSLOG2019103911.txt。
+下载日志文件名，默认 TSLOG，文件名自动添加时间及类型，形如 TSLOG20191107104143.txt。
 
 ###暴露方法：
 
 1、log：保存并打印一般日志
 2、warn：保存并打印警告日志
-3、error：保存并打印错误
+3、error：保存并打印错误日志
 4、downloadLog：保存并下载日志
 
 ###示例：
