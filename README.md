@@ -48,7 +48,7 @@ export default new TsLog();
 
 3、在项目需要调试处使用，如在 app.tsx 中使用
 
-import TsLog from "./tsLog";
+import TsLog from "./logger.ts";
 
 TsLog.log('11111');
 
