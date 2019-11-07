@@ -8,7 +8,7 @@
 日志保存在 localstorage 中，低版本浏览器不兼容，只做开发调试用。
 localstorage 大小有限（5M 左右），需要合理安排，仅打印关键部分，下载的日志文件推荐使用 notepad++ 查看。
 
-###配置介绍：
+## 配置介绍：
 
 1、usetsLog：boolean
 是否使用此插件，生产版本可由此参数控制不使用此功能，默认打开(true)。
@@ -25,7 +25,7 @@ localstorage 自定义存储 key 值，默认 tsLog。
 5、logName：string
 下载日志文件名，默认 TSLOG，文件名自动添加时间及类型，形如 TSLOG20191107104143.txt。
 
-###暴露方法：
+## 暴露方法：
 
 1、log：保存并打印一般日志
 
@@ -35,7 +35,7 @@ localstorage 自定义存储 key 值，默认 tsLog。
 
 4、downloadLog：保存并下载日志
 
-###示例：
+## 示例：
 
 1、安装
 npm i tslogger4frontend -D
