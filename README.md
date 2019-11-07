@@ -35,6 +35,8 @@ localstorage 自定义存储 key 值，默认 tsLog。
 
 4、downloadLog：保存并下载日志
 
+5、clear：清空已保存的日志
+
 ## 示例：
 
 1、安装

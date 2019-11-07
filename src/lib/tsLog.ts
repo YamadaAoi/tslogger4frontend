@@ -75,6 +75,11 @@ export class TsLog implements TsLogService {
     );
   }
 
+  clear() {
+    this.logList = [];
+    window.localStorage.removeItem(this.itemName);
+  }
+
   private _initLog() {
     let logInStorage = window.localStorage.getItem(this.itemName);
     if (logInStorage) {
@@ -103,7 +108,6 @@ export class TsLog implements TsLogService {
         type,
       });
     }
-    // window.localStorage.removeItem(this.itemName);
     window.localStorage.setItem(this.itemName, JSON.stringify(this.logList));
   }
 }
