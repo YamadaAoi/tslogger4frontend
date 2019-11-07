@@ -28,8 +28,11 @@ localstorage 自定义存储 key 值，默认 tsLog。
 ###暴露方法：
 
 1、log：保存并打印一般日志
+
 2、warn：保存并打印警告日志
+
 3、error：保存并打印错误日志
+
 4、downloadLog：保存并下载日志
 
 ###示例：
@@ -38,20 +41,31 @@ localstorage 自定义存储 key 值，默认 tsLog。
 npm i tslogger4frontend -D
 
 2、新建 logger.ts
+
 import TsLog from "tslogger4frontend";
+
 export default new TsLog();
 
 3、在项目需要调试处使用，如在 app.tsx 中使用
+
 import TsLog from "./tsLog";
+
 TsLog.log('11111');
+
 TsLog.log('22222');
+
 TsLog.log('33333');
+
 TsLog.downloadLog();
 
 即可下载文件如：TSLOG20191107104143.txt
 
 -----TSLOG START-----
+
 2019-11-07 10:41:43 INFO：11111
+
 2019-11-07 10:41:43 INFO：22222
+
 2019-11-07 10:41:43 INFO：33333
+
 -----TSLOG END-----
