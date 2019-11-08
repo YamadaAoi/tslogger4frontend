@@ -40,25 +40,29 @@ localstorage 自定义存储 key 值，默认 tsLog。
 ## 示例：
 
 1、安装
-npm i tslogger4frontend -D
+
+```bash
+$ npm i tslogger4frontend -D
+```
 
 2、新建 logger.ts
 
+```js
 import TsLog from "tslogger4frontend";
-
 export default new TsLog();
+```
 
 3、在项目需要调试处使用，如在 app.tsx 中使用
 
+```js
 import TsLog from "./logger.ts";
 
-TsLog.log('11111');
-
-TsLog.log('22222');
-
-TsLog.log('33333');
+TsLog.log("11111");
+TsLog.log("22222");
+TsLog.log("33333");
 
 TsLog.downloadLog();
+```
 
 即可下载文件如：TSLOG20191107104143.txt
 
