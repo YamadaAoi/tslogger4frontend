@@ -8,6 +8,7 @@ export class TsLog implements TsLogService {
   maxLen: number; // 日志数量上限
   logName: string; // 日志文件名
   logList: tsLogUtil.LogItem[]; // 日志列表
+
   constructor(config?: TsLogService) {
     this.doConsole = false;
     this.usetsLog = true;
@@ -81,6 +82,10 @@ export class TsLog implements TsLogService {
   }
 
   private _initLog() {
+    if (!window.localStorage) {
+      console.log("当前浏览器不支持localStorage!");
+      return;
+    }
     let logInStorage = window.localStorage.getItem(this.itemName);
     if (logInStorage) {
       try {
@@ -99,15 +104,35 @@ export class TsLog implements TsLogService {
     if (this.logList && this.logList.length === this.maxLen) {
       this.logList.shift();
     }
+    let tempLog: tsLogUtil.LogItem = {
+      log: "",
+      date: new Date().getTime(),
+      type,
+    };
     if (typeof obj === "string") {
-      this.logList.push({ log: obj, date: new Date().getTime(), type });
+      tempLog.log = obj;
     } else {
-      this.logList.push({
-        log: JSON.stringify(obj),
-        date: new Date().getTime(),
-        type,
-      });
+      tempLog.log = JSON.stringify(obj);
     }
-    window.localStorage.setItem(this.itemName, JSON.stringify(this.logList));
+    this.logList.push(tempLog);
+    this._saveLog(JSON.stringify(this.logList), tempLog);
+  }
+
+  private _saveLog(data: string, log?: tsLogUtil.LogItem) {
+    if (!window.localStorage) {
+      console.log("当前浏览器不支持localStorage!");
+      return;
+    }
+    try {
+      window.localStorage.setItem(this.itemName, data);
+    } catch (e) {
+      if ("QuotaExceededError" === e.name) {
+        this.clear();
+        if (undefined !== log) {
+          this.logList.push(log);
+          this._saveLog(JSON.stringify(this.logList));
+        }
+      }
+    }
   }
 }
