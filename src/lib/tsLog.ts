@@ -126,6 +126,7 @@ export class TsLog implements TsLogService {
     try {
       window.localStorage.setItem(this.itemName, data);
     } catch (e) {
+      console.log(e);
       if ("QuotaExceededError" === e.name) {
         this.clear();
         if (undefined !== log) {
